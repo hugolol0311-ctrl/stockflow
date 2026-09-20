@@ -18,7 +18,7 @@ A troca do segredo invalida as sessões existentes. O schema privado não deve s
 
 ## Implantação
 
-Importe o repositório na Vercel. Use a raiz do repositório, sem preset de framework. O arquivo `Dockerfile.vercel` é detectado automaticamente. Configure:
+Importe o repositório na Vercel. Use a raiz do repositório, com o preset Container. O arquivo `Dockerfile.vercel` é detectado automaticamente. Configure:
 
 - `SUPABASE_URL`: URL do projeto.
 - `SUPABASE_ANON_KEY`: chave publishable/anon.
