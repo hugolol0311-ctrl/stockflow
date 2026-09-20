@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Ferramentas opcionais de teste. O aplicativo em produção só precisa de Java.",
   "scripts": {
-    "test:db": "node --test supabase/tests/inventory.test.mjs",
+    "test:db": "node --test supabase/tests/*.test.mjs",
     "test:e2e": "playwright test",
     "check": "node --check src/main/resources/static/app.js"
   },

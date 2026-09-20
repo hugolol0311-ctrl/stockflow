@@ -32,3 +32,7 @@ PGlite serializa transações em uma conexão. Os testes validam as regras e os 
 ## Atualização: configuração no Supabase real
 
 Posteriormente, o projeto StockFlow foi criado e configurado no Supabase. A migração, as permissões, as regras de saldo/idempotência e o isolamento entre contas foram verificados no banco real com transação revertida. O endpoint de autenticação respondeu HTTP 200 e a leitura anônima de produtos foi recusada. Veja [SUPABASE-CONFIGURADO.md](SUPABASE-CONFIGURADO.md). Envio/recebimento de e-mail e primeiro login do usuário ainda dependem de cadastro pelo próprio usuário.
+
+## Preparação da Vercel
+
+Compilação aprovada com 14 testes Java, incluindo seis testes de sessões compartilhadas. A migração 002 também foi validada em PostgreSQL/PGlite para autorização por segredo, atualização parcial, rotação de identificador e prevenção de restauração de sessão após logout. A migração 002 ainda deve ser aplicada ao Supabase antes de ativar o perfil `vercel`.
