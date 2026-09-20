@@ -1,0 +1,13 @@
+{
+  "name": "stockflow-quality-checks",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Ferramentas opcionais de teste. O aplicativo em produção só precisa de Java.",
+  "scripts": {
+    "test:db": "node --test supabase/tests/inventory.test.mjs",
+    "test:e2e": "playwright test",
+    "check": "node --check src/main/resources/static/app.js"
+  },
+  "devDependencies": {"@electric-sql/pglite": "0.5.8", "@playwright/test": "1.63.0"}
+}

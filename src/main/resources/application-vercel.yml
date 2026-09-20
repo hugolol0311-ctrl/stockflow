@@ -1,0 +1,8 @@
+server:
+  forward-headers-strategy: framework
+  servlet:
+    session:
+      cookie:
+        secure: true
+stockflow:
+  session-secret: ${SESSION_STORE_SECRET}

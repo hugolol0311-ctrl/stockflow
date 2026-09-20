@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: stockflow
+  config:
+    import: optional:file:.env[.properties]
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: never
+    include-stacktrace: never
+  servlet:
+    session:
+      timeout: 8h
+      cookie:
+        http-only: true
+        same-site: strict
+        secure: ${COOKIE_SECURE:false}
+supabase:
+  url: ${SUPABASE_URL}
+  key: ${SUPABASE_ANON_KEY}
